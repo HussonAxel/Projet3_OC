@@ -1,0 +1,26 @@
+@import "../mixin";
+
+// RESPONSIVE TABLETTE
+@include tablet-res {
+  h1 {
+    font-family: "Shrikhand";
+  }
+  .menu__title--desktop {
+    display: none;
+  }
+  .menu__wrapper--single {
+    width: 75%;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  .menu__wrapper {
+    padding-bottom: 15px;
+  }
+  .menu__wrapper:last-child {
+    padding-bottom: 0;
+  }
+  .button {
+    padding: 25px;
+    width: 300px;
+  }
+}

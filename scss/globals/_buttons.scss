@@ -1,0 +1,20 @@
+.button__wrapper {
+  padding-bottom: 50px;
+}
+.button {
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: linear-gradient(#ff79da, #9356dc);
+  color: white;
+  border: none;
+  margin: auto;
+  margin-top: 25px;
+  box-shadow: 0 5px 5px rgb(135 135 135);
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  cursor: pointer;
+}
+.button:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,53 @@
+@import "../mixin";
+
+@include tablet-res {
+  .fonctionnement__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fonctionnement__title {
+    text-align: center;
+  }
+  .fonctionnement__card {
+    width: 350px;
+    align-items: center;
+    text-align: center;
+  }
+  .fonctionnement__subtitle {
+    position: relative !important;
+    left: -15px !important;
+  }
+  .restaurant__wrapper--container {
+    display: flex;
+  }
+  .restaurant__wrapper--container {
+    display: flex;
+    gap: 25px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .restaurant__wrapper--single {
+    width: 45%;
+  }
+  .restaurant__wrapper--title {
+    padding-left: 45px;
+  }
+  .restaurant__wrapper--singlePic {
+    height: 250px;
+    width: 100%;
+  }
+
+  .footer__logo {
+    text-align: center;
+    > svg {
+      width: 300px;
+      margin-top: 15px;
+    }
+  }
+  .footer__list {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 15px;
+  }
+}

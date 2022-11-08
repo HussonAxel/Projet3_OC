@@ -1,0 +1,42 @@
+@import "../mixin";
+
+@include desktop-res {
+  h1 {
+    font-family: "Shrikhand";
+  }
+  .menu__title--desktop {
+    display: block;
+  }
+  .menu__title {
+    display: none;
+  }
+  .restaurant__menu--image {
+    height: 500px;
+  }
+  .menu__title {
+    text-align: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: 98%;
+    justify-content: space-around;
+  }
+  .menu__wrapper {
+    margin-top: 35px;
+    padding-bottom: 0;
+  }
+  .menu__title {
+    display: none;
+  }
+  .menu__wrapper--single {
+    width: 380px;
+    p {
+      font-size: 14px;
+    }
+  }
+  .button {
+    padding: 25px;
+    width: 300px;
+  }
+}
