@@ -291,6 +291,11 @@ a {
   font-size: 16px;
   font-weight: 500;
   display: block;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.7;
 }
 
 @media screen and (min-width: 1280px) {
@@ -439,7 +444,10 @@ a {
     display: none;
   }
   .menu__wrapper--single {
-    width: 350px;
+    width: 400px;
+  }
+  .menu__wrapper--single p {
+    font-size: 14px;
   }
   .button {
     padding: 25px;
@@ -468,4 +476,15 @@ a {
     padding: 25px;
     width: 300px;
   }
+}
+span {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  font-weight: bold;
+  transition: margin 300ms;
+  float: right;
+  position: relative;
+  top: -20px;
 }/*# sourceMappingURL=index.css.map */
