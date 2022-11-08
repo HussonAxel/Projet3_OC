@@ -331,7 +331,7 @@
   width: 85%;
 }
 
-span {
+.menu__wrapper--texteAside {
   display: flex;
   justify-content: center;
   align-items: flex-end;
