@@ -476,21 +476,25 @@
   -webkit-animation: apparition 1.5s linear forwards;
           animation: apparition 1.5s linear forwards;
 }
-.menu__wrapper--single:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.menu__wrapper--single:nth-child(3) {
+.menu__wrapper--single:nth-child(1) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-.menu__wrapper--single:nth-child(4) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-.menu__wrapper--single:nth-child(5) {
+.menu__wrapper--single:nth-child(2) {
   -webkit-animation-delay: 0.8s;
           animation-delay: 0.8s;
+}
+.menu__wrapper--single:nth-child(3) {
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+.menu__wrapper--single:nth-child(4) {
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
+}
+.menu__wrapper--single:nth-child(5) {
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .gradient__child1 {
@@ -504,7 +508,7 @@
 }
 
 stop {
-  transition: 0.5s;
+  transition: 10s;
 }
 
 .gradient__child2 {
@@ -558,26 +562,29 @@ stop {
   stroke-width: 0.75px;
   width: 50px;
   height: 30px;
+  transition: 3s;
 }
 
 stop {
   transition: 0.5s;
 }
 
-.gradient__child1:hover,
-.gradient__child2:hover,
-.gradient__child3:hover,
-.gradient__child4:hover,
-.gradient__child--restaurant:hover {
+.gradient__child1:active,
+.gradient__child2:active,
+.gradient__child3:active,
+.gradient__child4:active,
+.gradient__child--restaurant:active {
   stroke-width: 0;
 }
 
-svg:hover stop:first-child {
+svg:active stop:first-child {
   stop-color: #ff79da;
+  transition: 3s;
 }
 
-svg:hover stop:last-child {
+svg:active stop:last-child {
   stop-color: #9356dc;
+  transition: 3s;
 }
 
 .validation {
@@ -600,12 +607,12 @@ svg:hover stop:last-child {
   }
 }
 
-.menu__wrapper--single:hover > .validation {
+.menu__wrapper--single:active > .validation {
   margin-right: 0rem;
   transition: 1s;
 }
 
-.menu__wrapper--single:hover > .validation > i {
+.menu__wrapper--single:active > .validation > i {
   transform: rotate(360deg);
 }
 
@@ -614,17 +621,63 @@ svg:hover stop:last-child {
   transition-delay: 200ms;
 }
 
-.menu__wrapper--single:hover > .menu__wrapper--description {
+.menu__wrapper--single:active > .menu__wrapper--description {
   width: 70%;
   min-width: 125px;
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .menu__wrapper--single:hover > .menu__wrapper--description {
+  .menu__wrapper--single:active > .menu__wrapper--description {
     min-width: unset;
     width: 100%;
   }
 }
 
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  background-color: #99e2d0;
+  z-index: 1;
+  inset: 0;
+  opacity: 0.7;
+  -webkit-animation: loader--hiding 3s ease-in-out forwards;
+          animation: loader--hiding 3s ease-in-out forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  top: -50px;
+  gap: 25px;
+}
+.loader p {
+  color: #3c3c3c;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1;
+  font-style: italic;
+}
+
+@-webkit-keyframes loader--hiding {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader--hiding {
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 body,
 * {
   margin: 0;
