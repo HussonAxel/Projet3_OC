@@ -60,8 +60,8 @@
   left: 20px;
 }
 
-.fa__icon {
-  padding-inline: 30px;
+.fa__icon--fonctionnement {
+  padding: 0 20px 0 30px;
   color: #6e6e6e;
 }
 
@@ -83,12 +83,6 @@
   color: black;
 }
 
-.fa-heart {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-}
-
 .restaurant__wrapper--single {
   background-color: white;
   border-radius: 20px;
@@ -98,6 +92,7 @@
 }
 
 .restaurant__wrapper--single:hover {
+  transition: 300ms;
   scale: 1.05;
 }
 
@@ -289,9 +284,11 @@
 
 .menu__title {
   font-family: "Shrikhand";
-  font-weight: 500;
-  font-size: 1.7rem;
-  padding: 25px 15px 25px 15px;
+  font-size: 1.6rem;
+  padding: 25px 15px 25px 0;
+  margin-right: 30px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 
 .menu__subtitle {
@@ -319,9 +316,25 @@
 
 .menu__wrapper--single {
   background-color: white;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px 0px 10px;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.menu__wrapper--description {
+  width: 85%;
+  min-width: 200px;
+}
+
+.menu__wrapper--description > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__wrapper--textWrapped {
@@ -329,18 +342,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
+  padding-bottom: 10px;
 }
 
 .menu__wrapper--texteAside {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  flex-direction: row;
-  font-weight: bold;
-  transition: margin 300ms;
-  float: right;
+  font-weight: 500;
+  padding: 5px;
   position: relative;
-  top: -20px;
+  top: -15px;
+  font-size: 16px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -372,6 +385,8 @@
   }
   .menu__title--desktop {
     display: block;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
   }
   .menu__title {
     display: none;
@@ -395,6 +410,9 @@
   .menu__title {
     display: none;
   }
+  .menu__wrapper--textWrapped {
+    width: 90%;
+  }
   .menu__wrapper--single {
     width: 380px;
   }
@@ -406,12 +424,6 @@
     width: 300px;
   }
 }
-:root {
-  --purple: #9356dc;
-  --pink: #ff79da;
-  --blue: #99e2d0;
-}
-
 .button__wrapper {
   padding-bottom: 50px;
   display: flex;
@@ -435,11 +447,182 @@
 
 .button:hover {
   opacity: 0.7;
+  box-shadow: 0 5px 5px rgb(37, 37, 37);
 }
 
 .footer__wrapper {
   background-color: #323232;
   padding: 0 0 30px 20px;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu__wrapper--single {
+  -webkit-animation: apparition 1.5s linear forwards;
+          animation: apparition 1.5s linear forwards;
+}
+.menu__wrapper--single:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.menu__wrapper--single:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.menu__wrapper--single:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.menu__wrapper--single:nth-child(5) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
+.gradient__child1 {
+  fill: url("#gradient__heart1");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child2 {
+  fill: url("#gradient__heart2");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child3 {
+  fill: url("#gradient__heart3");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child4 {
+  fill: url("#gradient__heart4");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child--restaurant {
+  fill: url("#gradient__heart--restaurant");
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 50px;
+  height: 30px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child1:hover,
+.gradient__child2:hover,
+.gradient__child3:hover,
+.gradient__child4:hover,
+.gradient__child--restaurant:hover {
+  stroke-width: 0;
+}
+
+svg:hover stop:first-child {
+  stop-color: #ff79da;
+}
+
+svg:hover stop:last-child {
+  stop-color: #9356dc;
+}
+
+.validation {
+  background-color: #99e2d0;
+  width: 4rem;
+  display: flex;
+  border-radius: 0px 10px 10px 0;
+  margin-top: -10px;
+  left: 10px;
+  position: relative;
+  margin-right: -4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .validation {
+    margin-right: -9rem;
+  }
+}
+
+.menu__wrapper--single:hover > .validation {
+  margin-right: 0rem;
+  transition: 1s;
+}
+
+.menu__wrapper--single:hover > .validation > i {
+  transform: rotate(360deg);
+}
+
+.validation > i {
+  transition: transform 1s;
+  transition-delay: 200ms;
+}
+
+.menu__wrapper--single:hover > .menu__wrapper--description {
+  width: 70%;
+  min-width: 125px;
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .menu__wrapper--single:hover > .menu__wrapper--description {
+    min-width: unset;
+    width: 100%;
+  }
 }
 
 body,

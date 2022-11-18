@@ -1,3 +1,4 @@
+@import "../variables";
 .main {
   background-color: #f5f5f5;
 }
@@ -38,9 +39,11 @@
 
 .menu__title {
   font-family: "Shrikhand";
-  font-weight: 500;
-  font-size: 1.7rem;
-  padding: 25px 15px 25px 15px;
+  font-size: 1.6rem;
+  padding: 25px 15px 25px 0;
+  margin-right: 30px;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
 }
 .menu__subtitle {
   width: 100%;
@@ -64,26 +67,39 @@
 }
 .menu__wrapper--single {
   background-color: white;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 10px 0px 10px;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  overflow: hidden;
 }
-
+.menu__wrapper--description {
+  width: 85%;
+  min-width: 200px;
+}
+.menu__wrapper--description > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .menu__wrapper--textWrapped {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 85%;
+  padding-bottom: 10px;
 }
 
 .menu__wrapper--texteAside {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  flex-direction: row;
-  font-weight: bold;
-  transition: margin 300ms;
-  float: right;
+  font-weight: 500;
+  padding: 5px;
   position: relative;
-  top: -20px;
+  top: -15px;
+  font-size: 16px;
 }

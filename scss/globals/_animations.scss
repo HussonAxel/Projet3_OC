@@ -1,0 +1,152 @@
+@import "./variables";
+
+@keyframes apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu__wrapper--single {
+  animation: apparition 1.5s linear forwards;
+
+  &:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 0.6s;
+  }
+
+  &:nth-child(5) {
+    animation-delay: 0.8s;
+  }
+}
+
+.gradient__child1 {
+  fill: url("#gradient__heart1");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child2 {
+  fill: url("#gradient__heart2");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child3 {
+  fill: url("#gradient__heart3");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child4 {
+  fill: url("#gradient__heart4");
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 25px;
+}
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child--restaurant {
+  fill: url("#gradient__heart--restaurant");
+  position: absolute;
+  top: 30px;
+  right: 15px;
+  stroke: #3c3c3c;
+  stroke-width: 0.75px;
+  width: 50px;
+  height: 30px;
+}
+stop {
+  transition: 0.5s;
+}
+
+.gradient__child1:hover,
+.gradient__child2:hover,
+.gradient__child3:hover,
+.gradient__child4:hover,
+.gradient__child--restaurant:hover {
+  stroke-width: 0;
+}
+
+svg:hover stop:first-child {
+  stop-color: #ff79da;
+}
+svg:hover stop:last-child {
+  stop-color: #9356dc;
+}
+
+.validation {
+  background-color: #99e2d0;
+  width: 4rem;
+  display: flex;
+  border-radius: 0px 10px 10px 0;
+  margin-top: -10px;
+  left: 10px;
+  position: relative;
+  margin-right: -4rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  @include tablet-res {
+    margin-right: -9rem;
+  }
+}
+
+.menu__wrapper--single:hover > .validation {
+  margin-right: 0rem;
+  transition: 1s;
+}
+
+.menu__wrapper--single:hover > .validation > i {
+  transform: rotate(360deg);
+}
+
+.validation > i {
+  transition: transform 1s;
+  transition-delay: 200ms;
+}
+
+.menu__wrapper--single:hover > .menu__wrapper--description {
+  width: 70%;
+  min-width: 125px;
+  @include tablet-res {
+    min-width: unset;
+    width: 100%;
+  }
+}

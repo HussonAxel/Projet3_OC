@@ -40,30 +40,65 @@
     />
     <main class="main">
       <div class="menu">
-        <h1 class="menu__title">
-          la palette du goût <i class="fa-regular fa-heart"></i>
-        </h1>
+        <h1 class="menu__title">la palette du goût</h1>
         <section class="menu__wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="gradient__child--restaurant"
+          >
+            <path
+              d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+            />
+            <defs>
+              <linearGradient
+                id="gradient__heart--restaurant"
+                x1="10"
+                y1="30"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="50%" stop-color="#f5f5f5" />
+                <stop offset="100%" stop-color="#f5f5f5" />
+              </linearGradient>
+            </defs>
+          </svg>
           <h2 class="menu__subtitle">ENTREES</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Fricassée d'escargot</h3>
-              <p class="menu__wrapper--textWrapped">Au piment d'Espelette</p>
+              <div class="menu__wrapper--description">
+                <h3>Fricassée d'escargot</h3>
+                <p class="menu__wrapper--textWrapped">Au piment d'Espelette</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 25€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Foie gras de canard mi-cuit</h3>
-              <p class="menu__wrapper--textWrapped">
-                Et ses copeaux de truffe noire
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Foie gras de canard mi-cuit</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Et ses copeaux de truffe noire
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 35€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Œuf au plat</h3>
-              <p class="menu__wrapper--textWrapped">
-                Assaisonné à la truffe sur lit de caviar
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Œuf au plat</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Assaisonné à la truffe sur lit de caviar
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 20€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>
@@ -71,23 +106,38 @@
           <h2 class="menu__subtitle">PLATS</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Filet de boeuf aux herbes</h3>
-              <p class="menu__wrapper--textWrapped">
-                Accompagné de sa ribambelle de légumes
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Filet de boeuf aux herbes</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Accompagné de sa ribambelle de légumes
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 40€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Parmentier de queue de boeuf</h3>
-              <p class="menu__wrapper--textWrapped">
-                À la truffe noire sur sa purée de panais
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Parmentier de queue de boeuf</h3>
+                <p class="menu__wrapper--textWrapped">
+                  À la truffe noire sur sa purée de panais
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 35€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Filet de turbot</h3>
-              <p class="menu__wrapper--textWrapped">Aux agrumes</p>
+              <div class="menu__wrapper--description">
+                <h3>Filet de turbot</h3>
+                <p class="menu__wrapper--textWrapped">Aux agrumes</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 44€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>
@@ -95,23 +145,38 @@
           <h2 class="menu__subtitle">DESSERTS</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Paris-Brest</h3>
-              <p class="menu__wrapper--textWrapped">Revisité</p>
+              <div class="menu__wrapper--description">
+                <h3>Paris-Brest</h3>
+                <p class="menu__wrapper--textWrapped">Revisité</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 18€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Macaron au chocolat d'exception</h3>
-              <p class="menu__wrapper--textWrapped">
-                Et glace à la vanille de Madagascar
-              </p>
-              <span class="menu__wrapper--texteAside"> 22€</span>
+              <div class="menu__wrapper--description">
+                <h3>Macaron au chocolat d'exception</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Et glace à la vanille de Madagascar
+                </p>
+              </div>
+              <span class="menu__wrapper--texteAside"> 22€ </span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Mousse au chocolat</h3>
-              <p class="menu__wrapper--textWrapped">
-                Au piment d'Espelette et à la truffe noire
-              </p>
-              <span class="menu__wrapper--texteAside"> 23 €</span>
+              <div class="menu__wrapper--description">
+                <h3>Mousse au chocolat</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Au piment d'Espelette et à la truffe noire
+                </p>
+              </div>
+              <span class="menu__wrapper--texteAside"> 23€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>

@@ -40,28 +40,63 @@
     />
     <main class="main">
       <div class="menu">
-        <h1 class="menu__title">
-          A la française <i class="fa-regular fa-heart"></i>
-        </h1>
+        <h1 class="menu__title">A la française</h1>
         <section class="menu__wrapper">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            class="gradient__child--restaurant"
+          >
+            <path
+              d="M14.75 1A5.24 5.24 0 0 0 10 4 5.24 5.24 0 0 0 0 6.25C0 11.75 10 19 10 19s10-7.25 10-12.75A5.25 5.25 0 0 0 14.75 1z"
+            />
+            <defs>
+              <linearGradient
+                id="gradient__heart--restaurant"
+                x1="10"
+                y1="30"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="50%" stop-color="#f5f5f5" />
+                <stop offset="100%" stop-color="#f5f5f5" />
+              </linearGradient>
+            </defs>
+          </svg>
           <h2 class="menu__subtitle">ENTREES</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Tartare de poulpe acidulé</h3>
-              <p class="menu__wrapper--textWrapped">Aux zestes d'orange</p>
+              <div class="menu__wrapper--description">
+                <h3>Tartare de poulpe acidulé</h3>
+                <p class="menu__wrapper--textWrapped">Aux zestes d'orange</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 25€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Velouté de légumes d'antan</h3>
-              <p class="menu__wrapper--textWrapped">
-                Carotte, panais, topinambour
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Velouté de légumes d'antan</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Carotte, panais, topinambour
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 35€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Soupe à l'oignon</h3>
-              <p class="menu__wrapper--textWrapped">Revisitée</p>
+              <div class="menu__wrapper--description">
+                <h3>Soupe à l'oignon</h3>
+                <p class="menu__wrapper--textWrapped">Revisitée</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 20€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>
@@ -69,25 +104,40 @@
           <h2 class="menu__subtitle">PLATS</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Coquilles Saint-Jacques</h3>
-              <p class="menu__wrapper--textWrapped">
-                Accompagnées d'une purée de panais
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Coquilles Saint-Jacques</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Accompagnées d'une purée de panais
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 40€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Magret de canard</h3>
-              <p class="menu__wrapper--textWrapped">
-                Et parmentier de pommes de terre
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Magret de canard</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Et parmentier de pommes de terre
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 35€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Pigeonneau d’Ille-et-Vilaine</h3>
-              <p class="menu__wrapper--textWrapped">
-                Sur son lit de gnocchis aux légumes
-              </p>
+              <div class="menu__wrapper--description">
+                <h3>Pigeonneau d’Ille-et-Vilaine</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Sur son lit de gnocchis aux légumes
+                </p>
+              </div>
               <span class="menu__wrapper--texteAside"> 44€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>
@@ -95,21 +145,36 @@
           <h2 class="menu__subtitle">DESSERTS</h2>
           <div>
             <div class="menu__wrapper--single">
-              <h3>Pétales de violettes glacés</h3>
-              <p class="menu__wrapper--textWrapped">Et purée de noisettes</p>
+              <div class="menu__wrapper--description">
+                <h3>Pétales de violettes glacés</h3>
+                <p class="menu__wrapper--textWrapped">Et purée de noisettes</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 18€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Fondant au chocolat</h3>
-              <p class="menu__wrapper--textWrapped">Revisité</p>
+              <div class="menu__wrapper--description">
+                <h3>Fondant au chocolat</h3>
+                <p class="menu__wrapper--textWrapped">Revisité</p>
+              </div>
               <span class="menu__wrapper--texteAside"> 22€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
             <div class="menu__wrapper--single">
-              <h3>Millefeuille croustillant</h3>
-              <p class="menu__wrapper--textWrapped">
-                Myrtilles et pâte d’amande
-              </p>
-              <span class="menu__wrapper--texteAside"> 23 €</span>
+              <div class="menu__wrapper--description">
+                <h3>Millefeuille croustillant</h3>
+                <p class="menu__wrapper--textWrapped">
+                  Myrtilles et pâte d’amande
+                </p>
+              </div>
+              <span class="menu__wrapper--texteAside"> 23€</span>
+              <div class="validation">
+                <i class="fas fa-check-circle fa-lg" aria-hidden="true"></i>
+              </div>
             </div>
           </div>
         </section>

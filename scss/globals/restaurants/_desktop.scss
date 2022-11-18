@@ -6,6 +6,8 @@
   }
   .menu__title--desktop {
     display: block;
+    font-weight: 400;
+    letter-spacing: 0.15rem;
   }
   .menu__title {
     display: none;
@@ -28,6 +30,9 @@
   }
   .menu__title {
     display: none;
+  }
+  .menu__wrapper--textWrapped {
+    width: 90%;
   }
   .menu__wrapper--single {
     width: 380px;
