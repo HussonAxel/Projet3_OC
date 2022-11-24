@@ -1,5 +1,6 @@
 @import "./variables";
 
+// PROGRESSIVE APPEARANCE ON LOAD
 @keyframes apparition {
   0% {
     opacity: 0;
@@ -31,6 +32,7 @@
   }
 }
 
+// LIKE BUTTON ANIMATION
 .gradient__child1 {
   fill: url("#gradient__heart1");
   position: absolute;
@@ -116,6 +118,7 @@ svg:active stop:last-child {
   transition: 3s;
 }
 
+// VALIDATION ANIMATION ON MENUS
 .validation {
   background-color: #99e2d0;
   width: 4rem;
@@ -157,29 +160,33 @@ svg:active stop:last-child {
   }
 }
 
-.loader {
-  display: flex;
-  flex-direction: column;
+// LOADER ANIMATION
+.background {
+  height: 100vh;
+  width: 100%;
+  inset: 0;
+  background-color: #eeede1;
+  opacity: 0.7;
   justify-content: center;
   text-align: center;
   align-items: center;
   position: fixed;
-  height: 100vh;
-  background-color: #99e2d0;
+  z-index: 1;
+  animation: loader--hiding 3s ease-in-out forwards;
+  animation-delay: 2s;
+}
+.loader {
+  perspective: 400px;
+  display: flex;
+  height: 100px;
+  width: 100px;
   z-index: 1;
   inset: 0;
   opacity: 0.7;
   animation: loader--hiding 3s ease-in-out forwards;
   animation-delay: 2s;
-  top: -50px;
-  gap: 25px;
-  & p {
-    color: #3c3c3c;
-    font-size: 2rem;
-    font-weight: 600;
-    line-height: 1;
-    font-style: italic;
-  }
+  margin: auto;
+  position: absolute;
 }
 
 @keyframes loader--hiding {
@@ -189,5 +196,49 @@ svg:active stop:last-child {
   100% {
     opacity: 0;
     visibility: hidden;
+  }
+}
+
+.loader .loader-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.loader .loader-item:nth-child(1) {
+  border-bottom: 6px solid #9356dc;
+  transform: rotateX(35deg) rotateY(-45deg);
+  animation: rotate-one 1s linear infinite;
+}
+
+.loader .loader-item:nth-child(2) {
+  border-right: 6px solid #ff79da;
+  transform: rotateX(50deg) rotateY(10deg);
+  animation: rotate-two 1s linear infinite;
+}
+
+.loader .loader-item:nth-child(3) {
+  border-top: 6px solid #99e2d0;
+  transform: rotateX(35deg) rotateY(55deg);
+  animation: rotate-three 1s linear infinite;
+}
+
+@keyframes rotate-one {
+  to {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-two {
+  to {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes rotate-three {
+  to {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
   }
 }
